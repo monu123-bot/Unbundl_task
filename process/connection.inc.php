@@ -4,10 +4,10 @@
 // $server = "localhost";
 // $database = "consult";
 
-$username = "epiz_30874962";
-$password = "8RxeMsjLZen5D";
-$server = "sql210.epizy.com";
-$database = "epiz_30874962_consultancy";
+$username = "root";
+$password = "";
+$server = "localhost";
+$database = "unbundl";
 $conn = mysqli_connect($server,$username,$password,$database);
 
 

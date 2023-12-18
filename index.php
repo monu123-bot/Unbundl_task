@@ -35,10 +35,11 @@
       <label for="email">Email Address</label>
       <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@gmail.com" required>
     </div>
-    <div class="field">
-      <label for="mobile">Mobile Number</label>
-      <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
-    </div>
+   
+<div class="field">
+    <label for="mobile">Mobile Number</label>
+    <input type="tel" id="mobile" name="mobile" pattern="'^[+]{1}(?:[0-9\\-\\(\\)\\/''\\.]\\s?){6, 15}[0-9]{1}$'" required>
+</div>
     <div class="field">
       <label for="address">Address</label>
       <input type="text" id="address" name="address" required>

@@ -38,6 +38,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["invoice"]) && isset($
     $pincode = $_POST['pincode'] ?? '';
     $serialNo = $_POST['serialNo'] ?? '';
     $purchaseDate = $_POST['purchaseDate'] ?? '';
+    
+  
+    
    
     
     $targetDirectory = "uploads/"; 
