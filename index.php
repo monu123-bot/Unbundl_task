@@ -26,7 +26,7 @@
       <label for="modelName">Model Name (LTW or Aero)</label>
       <input type="text" id="modelName" name="modelName" pattern="(LTW|Aero)" required title="Invalid format. Should be like LTW or Aero" >
     </div>
-    <!-- Customer Information -->
+   
     <div class="field">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
@@ -56,7 +56,7 @@
       <label for="pincode">Pincode</label>
       <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" required>
     </div>
-    <!-- Product Information -->
+   
     <div class="field">
       <label for="serialNo">Serial Number</label>
       <input type="text" id="serialNo" name="serialNo" required>

@@ -16,19 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["invoice"]) && isset($
    
 
     $serviceOrderNo = $_POST['orderNo'] ?? '';
-    if (!preg_match('/^[A-Za-z]{3}\d{10}$/', $serviceOrderNo)) {
-        
-        echo 'Invalid Installation Service Order No. Please email xyz@gmail.com for warranty registration.';
-        exit;
-    }
-
-    
-    $modelName = $_POST['modelName'] ?? '';
-    if (!in_array($modelName, ['LTW', 'Aero'])) {
-        
-        echo 'Invalid Model Name.';
-        exit;
-    }
     $name = $_POST['name'] ?? '';
     $email = $_POST['email'] ?? '';
     $mobile = $_POST['mobile'] ?? '';
@@ -70,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["invoice"]) && isset($
     $conn = mysqli_connect($server,$username,$password,$database);
    
     if ($conn->connect_error) {
-        // die('Connection failed: ' . $conn->connect_error);
+        
         header("Location: ../error.php");
     }
     else{
@@ -193,17 +180,14 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
     $mail->Port       = 465;                                    
 
-    //Recipients
-    $mail->setFrom('monudixit0007@gmail.com', 'Contact Form');
-    // $mail->addAddress('hr@unbundl.com', 'Company');  
-    $mail->addAddress('monudixit0007@gmail.com', 'Company');    
     
-
-    //Attachments
+    $mail->setFrom('monudixit0007@gmail.com', 'Contact Form');
+    $mail->addAddress('hr@unbundl.com', 'Company');  
+    // $mail->addAddress('monudixit0007@gmail.com', 'Company');    
+    
     $mail->addAttachment($invoice);         
     $mail->addAttachment($warrantyForm);    
 
-    //Content
     $mail->isHTML(true);                                  
     $mail->Subject = 'Warranty Registration';
     $mail->Body    = $template;
