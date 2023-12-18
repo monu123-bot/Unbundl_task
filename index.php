@@ -7,17 +7,24 @@
     <title>Warranty registration</title>
 </head>
 <body>
+<div class="container" style="background-color: black ; color:white"  >
 
-<div class="container">
+<img src="logo.png" />
+<h5 >Product Warranty Registration Form</h5>
+
+</div>
+
+
+<div class="container" >
 
   <form id="warrantyForm" enctype="multipart/form-data" action="./process/process_form.php" method="post">
     <div class="field">
       <label for="orderNo">Installation Service Order No</label>
-      <input type="text" id="orderNo" name="orderNo" pattern="[A-Za-z]{3}[0-9]{10}" required>
+      <input type="text" id="orderNo" name="orderNo" pattern="[A-Za-z]{3}[0-9]{10}" required  title="Invalid format. Should be like ABC1234567890" >
     </div>
     <div class="field">
       <label for="modelName">Model Name (LTW or Aero)</label>
-      <input type="text" id="modelName" name="modelName" pattern="(LTW|Aero)" required>
+      <input type="text" id="modelName" name="modelName" pattern="(LTW|Aero)" required title="Invalid format. Should be like LTW or Aero" >
     </div>
     <!-- Customer Information -->
     <div class="field">
@@ -26,7 +33,7 @@
     </div>
     <div class="field">
       <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@gmail\.com" required>
+      <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@gmail.com" required>
     </div>
     <div class="field">
       <label for="mobile">Mobile Number</label>
@@ -70,6 +77,9 @@
     </div>
   </form>
 </div>
+
+<br>
+<br>
 
 </body>
 </html>
